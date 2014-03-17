@@ -12,7 +12,8 @@ class Post
 	property :username, String
 	property :created_at, DateTime
 
-	validates_length_of :content, :max => 200
+	validates_length_of :content, :max => 200, :min => 1
+	validates_length_of :username, :min => 3
 end
 
 DataMapper.finalize;
