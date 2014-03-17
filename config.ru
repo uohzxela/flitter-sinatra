@@ -1,2 +1,2 @@
-require './flitter-sinatra'
+require 'flitter-sinatra'
 run Sinatra::Application
