@@ -1,0 +1,38 @@
+<div >
+	<form  action="/new" method="POST" align = "center">
+		<div align = "center">
+			Username <br>
+			<input type="text" name = "post[username"></input>
+			<br>
+			Create new post<br>
+			<textarea cols="40" rows="5" name="post[content]"></textarea>
+		</div>
+		<div align = "center">
+			<input type="submit" value="Submit">
+		</div>
+	</form>
+	<% if @posts != nil %>
+		<% @posts.each do |post| %>
+			<div class = "row">
+				<div class = "span4 offset6">
+					<p>@<a name = "username" href=<%= post.username %>><%= post.username %></a> | <%= Kronic.format(post.created_at) %></p>
+					<p>"<%= post.content %>"</p>
+				</div>
+				<div class = "span2" >
+					<form action="/edit" method="GET" style = "float:left;"> 
+						<input type="hidden" name = "id" value = <%= post.id%>>
+						</input>
+						<input type="submit" value = "Edit">
+					</form>
+					<form action="/delete" method="GET" style="float:left;">
+						<input type="hidden" name = "id" value = <%= post.id%>>
+						</input>
+						<input type="submit" value = "Delete">		
+					</form>
+				</div>
+			</div> 
+	<% end %> 
+	<% else %>
+		<p> No posts created yet.</p>
+	<%end %>
+</div>
