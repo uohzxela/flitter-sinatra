@@ -7,4 +7,5 @@ gem 'sinatra'
 gem 'pg'
 gem 'kronic'
 gem 'datamapper'
+gem 'dm-postgres-adapter'
 
