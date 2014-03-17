@@ -2,6 +2,8 @@ require 'sinatra'
 require './post'
 require 'kronic'
 
+set :port, 3000
+
 get '/' do
 	@posts = Post.all
 	erb :home
