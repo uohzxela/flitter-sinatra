@@ -1,2 +1,2 @@
-require 'flitter-sinatra'
+require './main.rb'
 run Sinatra::Application
