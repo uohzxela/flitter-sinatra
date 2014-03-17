@@ -7,5 +7,11 @@ gem 'sinatra'
 gem 'pg'
 gem 'kronic'
 gem 'datamapper'
-gem 'dm-postgres-adapter'
 
+group :development do
+  gem 'dm-sqlite-adapter'
+end
+
+group :production do
+  gem 'dm-postgres-adapter'
+end

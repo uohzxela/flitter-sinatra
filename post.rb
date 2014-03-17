@@ -4,8 +4,8 @@ require 'dm-timestamps'
 require 'dm-validations'
 
 #DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
-DataMapper::setup(:default, ENV['DATABASE_URL'])
-
+#DataMapper::setup(:default, ENV['DATABASE_URL'])
+DataMapper::setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/development.db")
 class Post 
 	include DataMapper::Resource
 	property :id, Serial
