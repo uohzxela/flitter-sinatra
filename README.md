@@ -22,7 +22,11 @@ Features implemented:
 
 Future work:
 
-1. Refactor the code
+1. Add validation error messages
+
+2. Allow post to output new lines entered by user
+
+3. Refactor the code
 
 2. Change development database from sqlite3 to postgreSQL, deploy to Heroku
 
