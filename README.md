@@ -7,7 +7,7 @@ Run 'bundle install' before running 'ruby main.rb'
 
 Access the app at http://localhost:3000/
 
-Requirements fulfilled:
+Features implemented:
 
 1. User should be able to “create new post”, with 2 fields: “username” and “Post”
 2. The “Post” should limited to 200 characters or less
