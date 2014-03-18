@@ -5,7 +5,8 @@ require 'dm-validations'
 
 #DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/development.db")
 #DataMapper::setup(:default, ENV['DATABASE_URL'])
-DataMapper::setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/development.db")
+#DataMapper::setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/development.db")
+DataMapper.setup(:default, 'postgres://localhost/postgres')
 class Post 
 	include DataMapper::Resource
 	property :id, Serial
@@ -17,6 +18,6 @@ class Post
 	validates_length_of :username, :min => 3
 end
 
-DataMapper.finalize;
+DataMapper.finalize.auto_upgrade!;
 
 
