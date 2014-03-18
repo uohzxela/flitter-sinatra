@@ -7,9 +7,7 @@ Run 'bundle install' before running 'ruby main.rb'
 
 Access the app at http://localhost:3000/
 
-Requirements:
-
-Your task is to build a simple micro-blogging web app called Flitter, similar to Twitter. Your app should address the following requirements.
+Requirements fulfilled:
 
 1. User should be able to “create new post”, with 2 fields: “username” and “Post”
 2. The “Post” should limited to 200 characters or less
