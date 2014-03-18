@@ -20,7 +20,7 @@ Features implemented:
 
 Future work:
 
-1. Add in meaningful comments to the code
+1. Refactor the code
 
 2. Change development database from sqlite3 to postgreSQL, deploy to Heroku
 
