@@ -2,6 +2,8 @@
 		<div align = "center">
 			Edit post<br>
 			<textarea cols="40" rows="5" name="content"><%= @content%></textarea>
+			<input type="hidden" name = "id" value = <%= @postID%>>
+			</input>			
 		</div>
 		<div align = "center">
 			<input type="submit" value="Submit">

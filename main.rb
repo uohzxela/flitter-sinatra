@@ -1,6 +1,8 @@
 require 'sinatra'
 require './post' #for database
 require 'kronic' #for date time formatting
+require 'shotgun'
+
 
 set :port, 3000
 
@@ -8,7 +10,7 @@ set :port, 3000
 get '/' do
 	#get a collection of all Post objects in the database
 	#store it in an instance variable to be used by ERB
-	@posts = Post.all
+	@posts = Post.all(:order => [ :created_at.desc])
 	erb :home
 end
 
@@ -48,13 +50,13 @@ get '/edit' do
 	#store the content in an instance variable to be used
 	#by ERB so that user can see the original message before editing
 	@content = p.content
-	$post = p #set current Post object to global variable $post
+	@postID = p.id #set current Post object to an instance variable
 	erb :edit
 end
 
 #executed after user finished editing
 get '/edited' do
-	p = $post #get the Post object to be deleted
+	p = Post.get(params[:id]) #get the Post object to be deleted
 	p.update(content: params[:content]) #update content of Post object
 	p.save
 	redirect to("/")
