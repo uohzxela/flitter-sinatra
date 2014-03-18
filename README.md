@@ -20,9 +20,9 @@ Requirements fulfilled:
 
 Future work:
 
-1. Change development database from sqlite3 to postgresql
+1. Add in meaningful comments to the code
 
-2. Deploy to Heroku
+2. Change development database from sqlite3 to postgreSQL, deploy to Heroku
 
 3. Implement pagination
 
