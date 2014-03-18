@@ -19,6 +19,7 @@ Your task is to build a simple micro-blogging web app called Flitter, similar to
 
 
 Future work:
+
 1. Change development database from sqlite3 to postgresql
 
 2. Deploy to Heroku
