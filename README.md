@@ -16,3 +16,10 @@ Your task is to build a simple micro-blogging web app called Flitter, similar to
 5. User should be able to delete post
 6. All posts are public. User can see a list of all posts at http://localhost:3000/
 7. Posts by same username should be visible at http://localhost:3000/username
+
+
+Future work:
+1. Change development database from sqlite3 to postgresql
+2. Deploy to Heroku
+3. Implement pagination
+4. Implement login and user database
