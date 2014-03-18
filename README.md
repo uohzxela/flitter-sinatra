@@ -1,9 +1,11 @@
 flitter-sinatra
 ===============
 
-Microblog created with Ruby Sinatra framework
+Microblog created with Sinatra Ruby and Twitter Bootstrap
 
-Run 'bundle install' before running 'ruby main.rb'
+The required dependencies (gems) are in the Gemfile.
+
+Please run 'bundle install' before running 'ruby main.rb'
 
 Access the app at http://localhost:3000/
 
