@@ -40,9 +40,14 @@ post '/new' do
 	#store content of new post in an instance variable
 	#to be displayed to the user through ERB
 	@content = p.content;
+	@popup_message = Array.new
+	i = 0
 	if !p.save
-		flash[:error] = "Format of the post/username is wrong."
+		p.errors.each do |e|
+			@popup_message.push(e)
+		end
 	end
+	puts @popup_message
 	@posts = Post.all(:order => [ :created_at.desc])
 	erb :home
 end
