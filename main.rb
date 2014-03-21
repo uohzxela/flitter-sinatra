@@ -2,6 +2,7 @@ require 'sinatra'
 require './post' #for database
 require 'kronic' #for date time formatting
 require 'shotgun'
+require 'sinatra/flash'
 
 
 set :port, 3000
@@ -39,8 +40,10 @@ post '/new' do
 	#store content of new post in an instance variable
 	#to be displayed to the user through ERB
 	@content = p.content;
-	p.save
-	@posts = Post.all
+	if !p.save
+		flash[:error] = "Format of the post/username is wrong."
+	end
+	@posts = Post.all(:order => [ :created_at.desc])
 	erb :home
 end
 
@@ -72,7 +75,7 @@ end
 #executed when finding posts by username
 get '/:user' do
 	#get a collection of Post objects that has the specified username
-	@posts = Post.all(:username => "#{params[:user]}")
+	@posts = Post.all(:username => "#{params[:user]}", :order => [ :created_at.desc])
 	erb :home
 end
 

@@ -7,6 +7,7 @@ gem 'sinatra'
 gem 'pg'
 gem 'kronic'
 gem 'datamapper'
+gem 'sinatra-flash'
 
 group :development do
   gem 'dm-sqlite-adapter'
