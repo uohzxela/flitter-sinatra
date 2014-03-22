@@ -43,7 +43,7 @@ post '/new' do
 	@popup_message = Array.new
 	i = 0
 	if !p.save
-		p.errors.each do |e|
+		p.errors.full_messages.each do |e|
 			@popup_message.push(e)
 		end
 	end

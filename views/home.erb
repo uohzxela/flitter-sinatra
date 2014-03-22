@@ -1,7 +1,7 @@
 <div >
 	<% if @popup_message %>
 		<% @popup_message.each do |msg| %>
-			<p align = "center" style="color:red" > <%= msg.join(" ") %> </p>
+			<p align = "center" style="color:red" > <%= msg %> </p>
 		<% end %>
 	<% end %>
 	<form  action="/new" method="POST" align = "center">

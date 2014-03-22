@@ -24,7 +24,7 @@ class Post
 
 	def check_spaces
 		if username.match(/\s/)
-			return false
+			return [ false, "Username must not have spaces"]
 		else
 			true
 		end
